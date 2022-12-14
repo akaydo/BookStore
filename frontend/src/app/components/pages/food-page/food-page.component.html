@@ -1,0 +1,51 @@
+<app-not-found
+  [visible]="!food"
+  notFoundMessage="Блюдо не найдено"
+  resetLinkText="На главную страницу"
+>
+</app-not-found>
+<div *ngIf="food" class="container">
+  <img [src]="food.imageUrl" [alt]="food.name" />
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{ food.name }}
+      </span>
+      <span class="favorite {{ food.favorite ? '' : 'not' }}">
+        <span class="favorite-heart">❤</span>
+      </span>
+    </div>
+    <div class="rating">
+      <star-rating
+        [value]="food.stars"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="25px"
+        [readonly]="true"
+      >
+      </star-rating>
+    </div>
+
+    <div class="tags">
+      <a *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">
+        {{ tag }}
+      </a>
+    </div>
+
+    <div class="cook-time">
+      <span>
+        Время приготовления ~ <strong>{{ food.cookTime }}</strong> минут
+      </span>
+    </div>
+
+    <div class="price">
+      <span>
+        {{ food.price | currency : "RUB" : "symbol-narrow" : "1.1-1" }}
+      </span>
+    </div>
+
+    <button (click)="addToCart()">Добавить в корзину</button>
+  </div>
+</div>

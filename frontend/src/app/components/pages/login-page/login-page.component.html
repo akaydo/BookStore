@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Вход в личный кабинет"></app-title>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <text-input
+        [control]="fc['email']"
+        [showErrorsWhen]="isSubmitted"
+        type="email"
+        label="Email"
+      >
+      </text-input>
+      <text-input
+        [control]="fc['password']"
+        [showErrorsWhen]="isSubmitted"
+        type="password"
+        label="Пароль"
+      >
+      </text-input>
+
+      <default-button text="Войти"></default-button>
+      <div class="register">
+        Еще нет аккаунта? &nbsp;
+        <a routerLink="/register" [queryParams]="{ returnUrl: returnUrl }">
+          Зарегистрируйтесь!
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<header>
+  <div class="container">
+    <a routerLink="/" class="logo">Sushiko</a>
+    <nav>
+      <ul>
+        <li *ngIf="!isAuth">
+          <a routerLink="/login">Войти</a>
+        </li>
+        <li *ngIf="isAuth" class="menu-container">
+          <a routerLink="/dashboard">{{ user.name }}</a>
+          <div class="menu">
+            <a routerLink="/profile">Профиль</a>
+            <a routerLink="/orders">Заказы</a>
+            <a (click)="logout()">Выйти</a>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/cart-page">
+            Корзина <span *ngIf="cartQuantity">{{ cartQuantity }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
