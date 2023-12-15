@@ -31,7 +31,7 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
-            `Добро пожаловать в Sushiko, ${user.name}!`,
+            `Добро пожаловать в MosBooks, ${user.name}!`,
             'Успешный вход'
           );
         },
@@ -49,7 +49,7 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
-            `Добро пожаловать в Sushiko, ${user.name}`,
+            `Добро пожаловать в MosBooks, ${user.name}`,
             'Успешная регистрация'
           );
         },

@@ -1,9 +1,8 @@
 export const sample_foods: any[] = [
   {
     id: "1",
-    name: "Ямакаси",
-    cookTime: "20-30",
-    price: 390.0,
+    name: "Портрет Дориана Грея. Оскар",
+    price: 299.0,
     favorite: false,
     stars: 4.8,
     imageUrl: "assets/yamakasi.png",

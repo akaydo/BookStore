@@ -8,7 +8,6 @@ export interface Food {
   favorite: boolean;
   stars: number;
   imageUrl: string;
-  cookTime: string;
 }
 
 export const FoodSchema = new Schema<Food>(
@@ -19,7 +18,6 @@ export const FoodSchema = new Schema<Food>(
     favorite: { type: Boolean, default: false },
     stars: { type: Number, required: true },
     imageUrl: { type: String, required: true },
-    cookTime: { type: String, required: true },
   },
   {
     toJSON: {
