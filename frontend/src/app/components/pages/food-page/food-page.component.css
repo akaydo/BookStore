@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,40 +6,39 @@
   margin: 3rem;
 }
 
-.container > *{
-  min-width: 25rem;
-  max-width: 40rem;
+.container > * {
+  max-width: 28rem;
 }
 
-img{
+img {
   border-radius: 3rem;
   flex: 1 0;
   object-fit: cover;
-  height: 35rem;
+  height: 45rem;
   margin: 1rem;
 }
 
-.details{
+.details {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex:1 0;
+  flex: 1 0;
   padding: 2rem;
   color: black;
   margin-left: 1rem;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
 }
 
-.name{
+.name {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.favorite{
+.favorite {
   color: #e72929;
   font-size: 2.5rem;
 }
@@ -47,46 +46,46 @@ img{
   color: red !important;
 }
 
-.favorite.not{
+.favorite.not {
   color: grey;
 }
 
-.tags{
+.tags {
   display: flex;
   flex-wrap: wrap;
 }
 
-.tags a{
+.tags a {
   background-color: #f0f0f0;
   padding: 0.3rem 1rem;
   margin: 0.2rem 0.15rem;
   border-radius: 10rem;
   font-weight: 600;
-  color: #6A5ACD;
+  color: #6a5acd;
 }
 
-.cook-time{
+.cook-time {
   margin-top: 1rem;
 }
 
-.cook-time span{
+.cook-time span {
   padding: 0.6rem 2rem 0.6rem 0;
   border-radius: 10rem;
   font-size: 1.3rem;
 }
 
-.price{
+.price {
   font-size: 1.8rem;
   margin: 2rem 2rem 2rem 0;
   color: #fcb900;
 }
 
-.price::before{
+.price::before {
   content: "Цена: ";
   color: darkgrey;
 }
 
-button{
+button {
   color: white;
   background: #dd9933;
   border: none;
@@ -96,7 +95,7 @@ button{
   outline: none;
 }
 
-button:hover{
+button:hover {
   opacity: 0.9;
   cursor: pointer;
 }

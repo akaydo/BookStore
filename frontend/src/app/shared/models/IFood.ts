@@ -1,10 +1,9 @@
-export class IFood{
-  id!:string;
-  name!:string;
-  price!:number;
+export class IFood {
+  id!: string;
+  name!: string;
+  price!: number;
   tags?: string[];
-  favorite!:boolean;
+  favorite!: boolean;
   stars!: number;
   imageUrl!: string;
-  cookTime!:string;
 }
