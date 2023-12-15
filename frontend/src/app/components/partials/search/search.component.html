@@ -1,10 +1,6 @@
 <div>
-  <input
-    #s
-    type="text"
-    placeholder="Введите название книги"
-    (keyup.enter)="search(s.value)"
-    [value]="searchTerm"
-  />
+  <input #s type="text" placeholder="Введите название блюда"
+   (keyup.enter)="search(s.value)"
+   [value]="searchTerm" />
   <button (click)="search(s.value)">Поиск</button>
 </div>
